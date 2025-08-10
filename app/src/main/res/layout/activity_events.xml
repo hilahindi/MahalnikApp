@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp">
+
+        <!-- Page title -->
+        <TextView
+            android:id="@+id/tvEventsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EVENTS"
+            android:fontFamily="@font/rubik_bold"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:letterSpacing="0.02"
+            android:gravity="center"
+            android:paddingBottom="4dp"/>
+
+        <!-- Calendar inside a card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="#43A047"
+            android:clipToPadding="false"
+            android:padding="8dp">
+
+            <!-- Material Calendar View -->
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                app:mcv_firstDayOfWeek="sunday"
+                app:mcv_showOtherDates="all" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Message when there are no events for the selected day -->
+        <TextView
+            android:id="@+id/eventsEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="אין אירועים ביום זה"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="24dp"
+            android:visibility="gone"/>
+
+        <!-- Message when there are no events for the selected month -->
+        <TextView
+            android:id="@+id/eventsMonthEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="אין אירועים בחודש זה"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+
+        <!-- RecyclerView for listing events -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp" />
+    </LinearLayout>
+
+    <!-- Floating Action Button for adding a new event -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Event"
+        app:srcCompat="@drawable/ic_add"
+        app:backgroundTint="#FDD835"
+        app:tint="@color/black"
+        android:layout_gravity="bottom|start"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

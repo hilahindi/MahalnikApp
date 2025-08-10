@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/infoCategoriesFragment">
+
+    <fragment
+        android:id="@+id/infoCategoriesFragment"
+        android:name="com.example.mahalapp.fragments.InfoCategoriesFragment"
+        android:label="information">
+        <action
+            android:id="@+id/action_infoCategories_to_infoContent"
+            app:destination="@id/infoContentFragment">
+            <argument
+                android:name="category"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoContentFragment"
+        android:name="com.example.mahalapp.fragments.InfoContentFragment"
+        android:label="infoByCategory">
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+</navigation>

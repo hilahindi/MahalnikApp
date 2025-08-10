@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Page title -->
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GET CONTACT"
+            android:fontFamily="@font/rubik_bold"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:letterSpacing="0.02"
+            android:gravity="center"
+            android:paddingBottom="4dp"/>
+
+        <!-- Subject input -->
+        <EditText
+            android:id="@+id/editTextSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"
+            android:padding="14dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <!-- Message input -->
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Your Message"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="12dp"
+            android:padding="14dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <!-- Choose file button -->
+        <Button
+            android:id="@+id/buttonChooseFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attach File"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="#FFD966"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+        <!-- Selected file name -->
+        <TextView
+            android:id="@+id/textViewFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No file selected"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Send button -->
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFD966"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:padding="14dp" />
+
+        <!-- Status message -->
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#E53935"
+            android:paddingTop="10dp" />
+
+        <!-- Upload progress section -->
+        <LinearLayout
+            android:id="@+id/uploadProgressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+            <!-- Progress bar -->
+            <ProgressBar
+                android:id="@+id/progressBarUpload"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progressTint="#FFD966" />
+
+            <!-- Progress percentage text -->
+            <TextView
+                android:id="@+id/textViewProgressPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0%"
+                android:textSize="14sp"
+                android:textColor="#2E3A59" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

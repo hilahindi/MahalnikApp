@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563301245189",
+    "project_id": "mahalappfirebase",
+    "storage_bucket": "mahalappfirebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563301245189:android:71a2c699bf671a9d3b576c",
+        "android_client_info": {
+          "package_name": "com.example.mahalapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnKFW0Xpt4Nl6d3-EJYjOdpnb5wC2bBQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

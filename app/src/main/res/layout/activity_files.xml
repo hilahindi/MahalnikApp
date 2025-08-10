@@ -1,0 +1,31 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Page title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FILE DOWNLOAD"
+        android:fontFamily="@font/rubik_bold"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:letterSpacing="0.02"
+        android:gravity="center"
+        android:paddingBottom="4dp"/>
+
+    <!-- RecyclerView for the list of documents -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false" />
+
+</LinearLayout>
